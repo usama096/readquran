@@ -1,0 +1,29 @@
+.surah-preview {
+  background-color: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  transform: rotate(45deg);
+  -webkit-margin-end: 10px;
+  margin-inline-end: 10px;
+}
+
+.surah-preview>span {
+  transform: rotate(-45deg);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+ion-row {
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+ion-row:hover {
+  background-color: white;
+  color: black;
+}

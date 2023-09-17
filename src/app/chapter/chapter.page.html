@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>chapter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="chapter">
+  <div class="p-4 ws-4" dir="rtl">
+    <p dir="rtl" class="text-center mb-4">
+      بِسۡمِ اللهِ الرَّحۡمٰنِ الرَّحِيۡمِ
+    </p>
+    <ng-container *ngFor="let v of chapter.verses">
+      <span dir="rtl" class="p-2"
+        >{{v.textIndopak}}
+        <div class="verse-number">{{v.verseKey |verseNumber}}</div>
+      </span>
+    </ng-container>
+  </div>
+</ion-content>

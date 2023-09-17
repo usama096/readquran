@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="text-center"> Home (Chapters) </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ng-container *ngFor="let chapter of chapters">
+      <ion-row class="mb-2" [routerLink]="'/chapter/'+chapter.id">
+        <ion-col size="8">
+          <div class="flex">
+            <div class="surah-preview self-center"><span>{{chapter.id}}</span></div>
+            <div class="ml-2">
+              <div>{{chapter.nameSimple}}</div>
+              <div class="gray font-semibold text-[12px]">{{chapter.translatedName.name}}</div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="flex justify-end">
+          <div>
+            <div class="text-center">{{chapter.nameArabic}}</div>
+            <div class="gray ont-semibold text-[12px]">{{chapter.versesCount}} Ayahs</div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>
